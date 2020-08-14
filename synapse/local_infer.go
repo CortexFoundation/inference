@@ -10,9 +10,9 @@ import (
 
 	"github.com/CortexFoundation/CortexTheseus/common"
 	"github.com/CortexFoundation/CortexTheseus/common/lru"
-	"github.com/CortexFoundation/cvm-runtime/kernel"
 	"github.com/CortexFoundation/CortexTheseus/log"
 	"github.com/CortexFoundation/CortexTheseus/metrics"
+	"github.com/CortexFoundation/cvm-runtime/kernel"
 	"github.com/CortexFoundation/inference"
 	"time"
 )
