@@ -84,6 +84,6 @@ const (
 
 //go:generate gencodec -type InferResult -out gen_result_json.go
 type InferResult struct {
-	Data hexutil.Bytes `json:"data" gencodec:"required`
-	Info string        `json:"info" gencodec:"required`
+	Data hexutil.Bytes `json:"data" gencodec:"required"`
+	Info string        `json:"info" gencodec:"required"`
 }

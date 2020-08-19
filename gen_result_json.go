@@ -4,6 +4,7 @@ package inference
 
 import (
 	"encoding/json"
+	"errors"
 
 	"github.com/CortexFoundation/CortexTheseus/common/hexutil"
 )
@@ -11,8 +12,8 @@ import (
 // MarshalJSON marshals as JSON.
 func (i InferResult) MarshalJSON() ([]byte, error) {
 	type InferResult struct {
-		Data hexutil.Bytes `json:"data" gencodec:"required`
-		Info string        `json:"info" gencodec:"required`
+		Data hexutil.Bytes `json:"data" gencodec:"required"`
+		Info string        `json:"info" gencodec:"required"`
 	}
 	var enc InferResult
 	enc.Data = i.Data
@@ -23,18 +24,20 @@ func (i InferResult) MarshalJSON() ([]byte, error) {
 // UnmarshalJSON unmarshals from JSON.
 func (i *InferResult) UnmarshalJSON(input []byte) error {
 	type InferResult struct {
-		Data *hexutil.Bytes `json:"data" gencodec:"required`
-		Info *string        `json:"info" gencodec:"required`
+		Data *hexutil.Bytes `json:"data" gencodec:"required"`
+		Info *string        `json:"info" gencodec:"required"`
 	}
 	var dec InferResult
 	if err := json.Unmarshal(input, &dec); err != nil {
 		return err
 	}
-	if dec.Data != nil {
-		i.Data = *dec.Data
+	if dec.Data == nil {
+		return errors.New("missing required field 'data' for InferResult")
 	}
-	if dec.Info != nil {
-		i.Info = *dec.Info
+	i.Data = *dec.Data
+	if dec.Info == nil {
+		return errors.New("missing required field 'info' for InferResult")
 	}
+	i.Info = *dec.Info
 	return nil
 }
