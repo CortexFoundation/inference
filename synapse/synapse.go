@@ -69,7 +69,11 @@ func Engine() *Synapse {
 	return synapseInstance
 }
 
+var mut sync.Mutex
+
 func New(config *Config) *Synapse {
+	mut.Lock()
+	defer mut.Unlock()
 	if synapseInstance != nil {
 		log.Warn("Synapse Engine has been initalized", "synapse", synapseInstance, "config", config)
 		return synapseInstance
