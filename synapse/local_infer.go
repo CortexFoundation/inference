@@ -164,6 +164,7 @@ func (s *Synapse) infer(modelInfoHash, inputInfoHash string, inputContent []byte
 		}
 
 		if memoryUsage < MinMemoryUsage {
+			log.Warn("8G+ Memory is suggested to run the full node fluently")
 			memoryUsage = MinMemoryUsage
 		}
 
