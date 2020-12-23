@@ -1,6 +1,6 @@
 module github.com/CortexFoundation/inference
 
-go 1.14
+go 1.15
 
 require (
 	github.com/CortexFoundation/CortexTheseus v1.10.8
