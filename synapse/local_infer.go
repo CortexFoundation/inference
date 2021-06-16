@@ -190,13 +190,13 @@ func (s *Synapse) infer(modelInfoHash, inputInfoHash string, inputContent []byte
 	if !ok {
 		modelJson, modelJson_err := s.config.Storagefs.GetFileWithSize(ctx, modelHash, modelSize, SYMBOL_PATH)
 		if modelJson_err != nil || modelJson == nil {
-			log.Warn("Searching symbol", "ih", modelHash, "error", modelJson_err, "size", modelSize)
+			log.Debug("Searching symbol", "ih", modelHash, "error", modelJson_err, "size", modelSize)
 			return nil, KERNEL_RUNTIME_ERROR
 		}
 
 		modelParams, modelParams_err := s.config.Storagefs.GetFileWithSize(ctx, modelHash, modelSize, PARAM_PATH)
 		if modelParams_err != nil || modelParams == nil {
-			log.Warn("Searching params", "ih", modelHash, "error", modelParams_err, "size", modelSize)
+			log.Debug("Searching params", "ih", modelHash, "error", modelParams_err, "size", modelSize)
 			return nil, KERNEL_RUNTIME_ERROR
 		}
 
