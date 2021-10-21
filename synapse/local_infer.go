@@ -264,3 +264,15 @@ func (s *Synapse) download(infohash string, request uint64) error {
 
 	return nil
 }
+
+func (s *Synapse) seedingLocal(filePath string, isLinkMode bool) (ih string, err error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	ih, err = s.config.Storagefs.SeedingLocal(ctx, filePath, isLinkMode)
+	if err != nil {
+		log.Error("SeedingLocal", "synapse", err.Error())
+		return ih, KERNEL_RUNTIME_ERROR
+	}
+
+	return
+}
