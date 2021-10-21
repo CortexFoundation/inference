@@ -270,6 +270,7 @@ func (s *Synapse) seedingLocal(filePath string, isLinkMode bool) (ih string, err
 	defer cancel()
 	ih, err = s.config.Storagefs.SeedingLocal(ctx, filePath, isLinkMode)
 	if err != nil {
+		log.Error("SeedingLocal", "synapse", err.Error())
 		return ih, KERNEL_RUNTIME_ERROR
 	}
 
