@@ -276,3 +276,21 @@ func (s *Synapse) seedingLocal(filePath string, isLinkMode bool) (ih string, err
 
 	return
 }
+
+func (s *Synapse) pauseLocalSeedFile(ih string) (err error) {
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	err = s.config.Storagefs.PauseLocalSeed(ctx, ih)
+	if err != nil {
+		log.Error("PauseLocalSeed", "synapse", err.Error())
+		return KERNEL_RUNTIME_ERROR
+	}
+
+	return
+}
+
+func (s *Synapse) listAllTorrents() map[string]map[string]int {
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	return s.config.Storagefs.ListAllTorrents(ctx)
+}
