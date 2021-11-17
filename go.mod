@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/CortexFoundation/CortexTheseus v1.10.28-0.20211020101646-22f7fa26744a
 	github.com/CortexFoundation/cvm-runtime v0.0.0-20210119064759-82917ece736a
-	github.com/CortexFoundation/torrentfs v1.0.24-0.20211021071129-9c3774c7f89d
+	github.com/CortexFoundation/torrentfs v1.0.24-0.20211115144512-a3c43a917a54
 	github.com/go-resty/resty/v2 v2.3.1-0.20201101194733-0de0d7e3240b
 	github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
@@ -16,13 +16,13 @@ require (
 	github.com/CortexFoundation/merkletree v0.0.0-20210226031755-94f6423532ee // indirect
 	github.com/RoaringBitmap/roaring v0.9.4 // indirect
 	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
-	github.com/allegro/bigcache/v3 v3.0.0 // indirect
+	github.com/allegro/bigcache/v3 v3.0.1 // indirect
 	github.com/anacrolix/chansync v0.3.0-0.0.20211007004133-3f72684c4a93 // indirect
 	github.com/anacrolix/confluence v1.8.0 // indirect
 	github.com/anacrolix/dht/v2 v2.10.6-0.20211007004332-99263ec9c1c8 // indirect
 	github.com/anacrolix/envpprof v1.1.1 // indirect
 	github.com/anacrolix/go-libutp v1.0.4 // indirect
-	github.com/anacrolix/log v0.9.0 // indirect
+	github.com/anacrolix/log v0.10.0 // indirect
 	github.com/anacrolix/missinggo v1.3.0 // indirect
 	github.com/anacrolix/missinggo/perf v1.0.0 // indirect
 	github.com/anacrolix/missinggo/v2 v2.5.2 // indirect
@@ -30,7 +30,7 @@ require (
 	github.com/anacrolix/multiless v0.1.1-0.20210529082330-de2f6cf29619 // indirect
 	github.com/anacrolix/stm v0.3.0 // indirect
 	github.com/anacrolix/sync v0.4.0 // indirect
-	github.com/anacrolix/torrent v1.33.1-0.20211019030748-3ef8cfba27af // indirect
+	github.com/anacrolix/torrent v1.34.1-0.20211029005757-c2ed60f9f2d1 // indirect
 	github.com/anacrolix/upnp v0.1.2-0.20200416075019-5e9378ed1425 // indirect
 	github.com/anacrolix/utp v0.1.0 // indirect
 	github.com/benbjohnson/immutable v0.3.0 // indirect
@@ -45,6 +45,7 @@ require (
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/google/btree v1.0.1 // indirect
+	github.com/google/go-cmp v0.5.6 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.5-0.20210104140557-80c98217689d // indirect
@@ -80,7 +81,7 @@ require (
 	github.com/ucwong/golang-set v1.8.1-0.20200419153428-d7b0b1ac2d43 // indirect
 	github.com/willf/bitset v1.1.11 // indirect
 	github.com/willf/bloom v2.0.3+incompatible // indirect
-	go.etcd.io/bbolt v1.3.6 // indirect
+	go.etcd.io/bbolt v1.3.7-0.20210702075620-b18879eb6c41 // indirect
 	golang.org/x/net v0.0.0-20210813160813-60bc85c4be6d // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/sys v0.0.0-20210910150752-751e447fb3d0 // indirect
