@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/CortexFoundation/CortexTheseus v1.10.30-0.20211224025015-e679796cfa29
 	github.com/CortexFoundation/cvm-runtime v0.0.0-20210119064759-82917ece736a
-	github.com/CortexFoundation/torrentfs v1.0.25-0.20211224020210-8ead684ab508
+	github.com/CortexFoundation/torrentfs v1.0.25-0.20211224025354-181a9db3caab
 	github.com/go-resty/resty/v2 v2.3.1-0.20201101194733-0de0d7e3240b
 	github.com/shirou/gopsutil v3.21.4-0.20210419000835-c7a38de76ee5+incompatible
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
