@@ -1,22 +1,24 @@
 package synapse
 
 import (
+	"context"
+	"strings"
+
 	// "io/ioutil"
 	// "os"
 	// "path/filepath"
-	"strings"
-	//"sync"
-	"context"
 
 	"github.com/CortexFoundation/CortexTheseus/common"
 	"github.com/CortexFoundation/CortexTheseus/common/lru/legacy"
+
+	//"sync"
 	"github.com/CortexFoundation/CortexTheseus/log"
 	"github.com/CortexFoundation/CortexTheseus/metrics"
 	"github.com/CortexFoundation/cvm-runtime/kernel"
+	gopsutil "github.com/shirou/gopsutil/mem"
+
 	"github.com/CortexFoundation/inference"
 	//"time"
-
-	gopsutil "github.com/shirou/gopsutil/mem"
 )
 
 const (

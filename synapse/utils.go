@@ -4,13 +4,15 @@ import (
 	"encoding/binary"
 	"errors"
 
-	//"bytes"
 	"github.com/CortexFoundation/CortexTheseus/common"
 	"github.com/CortexFoundation/CortexTheseus/common/hexutil"
+
+	//"bytes"
 	"github.com/CortexFoundation/CortexTheseus/log"
 	"github.com/CortexFoundation/CortexTheseus/rlp"
-	"github.com/CortexFoundation/inference"
 	"golang.org/x/crypto/sha3"
+
+	"github.com/CortexFoundation/inference"
 )
 
 func ReadData(r *inference.NpyReader) ([]byte, error) {

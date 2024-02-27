@@ -1,12 +1,13 @@
 package synapse
 
 import (
-	"github.com/CortexFoundation/inference"
 	"io/ioutil"
 	"os"
 	"path"
 	"strings"
 	"testing"
+
+	"github.com/CortexFoundation/inference"
 	//"fmt"
 )
 

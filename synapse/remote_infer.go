@@ -2,11 +2,13 @@ package synapse
 
 import (
 	"encoding/binary"
-	//"encoding/json"
 	"time"
 
 	"github.com/CortexFoundation/CortexTheseus/common/hexutil"
+
+	//"encoding/json"
 	"github.com/CortexFoundation/CortexTheseus/log"
+
 	"github.com/CortexFoundation/inference"
 )
 

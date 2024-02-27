@@ -2,6 +2,10 @@ package synapse
 
 import (
 	"fmt"
+	"math/big"
+	"sync"
+	"time"
+
 	"github.com/CortexFoundation/CortexTheseus/common"
 	"github.com/CortexFoundation/CortexTheseus/common/lru/legacy"
 	"github.com/CortexFoundation/CortexTheseus/log"
@@ -9,10 +13,7 @@ import (
 	"github.com/CortexFoundation/cvm-runtime/kernel"
 	"github.com/CortexFoundation/torrentfs"
 	resty "github.com/go-resty/resty/v2"
-	"math/big"
 	//"strconv"
-	"sync"
-	"time"
 )
 
 var (
