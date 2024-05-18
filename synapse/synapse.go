@@ -130,11 +130,9 @@ func (s *Synapse) Close() {
 	if s.config.Storagefs != nil {
 		s.config.Storagefs.Stop()
 	}
-	for _, c := range s.caches {
-		if c != nil {
-			c.Clear()
-		}
-	}
+
+	clear(s.caches)
+
 	log.Info("Synapse Engine Closed")
 }
 
